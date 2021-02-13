@@ -7,11 +7,12 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from '../services/auth.service'
 import { from } from 'rxjs';
+import { HomeComponent } from './home/home.component';
 
 
 
 @NgModule({
-  declarations: [RegisterComponent, LoginComponent],
+  declarations: [RegisterComponent, LoginComponent, HomeComponent],
   imports: [
     CommonModule,
     FormsModule,

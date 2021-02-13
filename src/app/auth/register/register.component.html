@@ -6,12 +6,69 @@
 
     <form #frmRegister="ngForm" class="login-container" (ngSubmit)="onRegister(frmRegister)">
       <p><input type="email" name="email" placeholder="Email" ngModel required></p>
-      
       <!--<p><input type="name" name="name" placeholder="Name" ngModel required></p>-->
-
       <p><input type="password" name="password" placeholder="Password"ngModel required></p>
 
       <p><input type="submit" value="Register"></p>
     </form>
   </div>
+</div> 
+
+
+
+
+
+
+<!-- ESTE SI FUNCIONA, LO DE ARRIVA ES DE CALIS
+<div class="container">
+  <div class="login">
+    <div class="login-triangle"></div>
+    
+    <h2 class="login-header">Registrar Usuario</h2>
+   
+    <form #frmRegister="ngForm" class="login-container" (ngSubmit)="onRegister(frmRegister)">
+
+      <p><input type="email" name="email" placeholder="Email" ngModel required></p>
+    </form>
+
+  
+    <form #frmPersona="ngForm" class="login-container" (ngSubmit)="onPersona(frmPersona)">
+    
+ <form  class="login-container" >
+
+      <p><input type="name" name="nombre" placeholder="Nombre" ngModel required></p>
+      <p><input type="name" name="apellidop" placeholder="Apellido Paterno" ngModel required></p>
+      <p><input type="name" name="apellidom" placeholder="Apellido Materno" ngModel required></p>
+
+      <p>Foto de perfil <br>
+      <input type="file" id="fotoPerfil" name="fotoPerfil" ngModel required></p>
+
+      <label for="sexos">Seleccione sexo</label>
+      <div ngModel required>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+        <label class="form-check-label" for="exampleRadios1">
+          Hombre
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+        <label class="form-check-label" for="exampleRadios2">
+          Mujer
+        </label>
+      </div>
+      </div>
+      <br>
+
+      <p><input type="number" name="edad" placeholder="Edad" ngModel required></p>
+      <p><input type="number" name="telefono" placeholder="Numero de telefono" ngModel required></p>
+    </form>
+
+    <form #frmRegister="ngForm" class="login-container" (ngSubmit)="onRegister(frmRegister)">
+
+      <p><input type="password" name="password" placeholder="Password"ngModel required></p>
+      <p><input type="submit" value="Register"></p>
+    </form>
+  </div>
 </div>
+-->
