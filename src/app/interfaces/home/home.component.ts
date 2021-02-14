@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../services/auth.service';
 import { ProductosI } from '../../models/productos'
-import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router'
+import {ProductoService } from '../../services/producto.service'
 
 @Component({
   selector: 'app-home',
@@ -11,11 +11,11 @@ import { HttpClient } from '@angular/common/http';
 export class HomeComponent implements OnInit {
 
   productos: ProductosI[];
-  constructor(private authService: AuthService) { 
+  constructor(private productoService: ProductoService, private router:Router) { 
   }
 
   ngOnInit() {
-    this.authService.getAllProductos().subscribe(data => this.productos = data);
+    this.productoService.getAllProductos().subscribe(data => (this.productos = data));
   }
 
 }

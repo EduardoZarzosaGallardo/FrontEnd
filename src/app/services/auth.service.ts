@@ -4,7 +4,6 @@ import { UserI } from '../models/user';
 import { JwtResponseI } from '../models/jwt-response';
 import { tap } from 'rxjs/operators';
 import { Observable, BehaviorSubject } from 'rxjs'
-import { ProductosI} from '../models/productos'
 
 @Injectable()
 
@@ -13,6 +12,7 @@ export class AuthService {
   AUTH_SERVER: string = 'http://127.0.0.1:3333';
   authSubject = new BehaviorSubject(false);
   private token: string;
+  
   constructor(private httpClient: HttpClient) { }
 
   register(user: UserI): Observable<JwtResponseI> {
@@ -59,10 +59,6 @@ export class AuthService {
       this.token = localStorage.getItem("ACCES_TOKEN");
     }
     return this.token
-  }
-  private api = 'http://127.0.0.1:3333/Producto';
-  getAllProductos():Observable<ProductosI[]> {
-    return this.httpClient.get<ProductosI[]>(this.api)
   }
 
 }

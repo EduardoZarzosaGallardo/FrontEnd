@@ -1,0 +1,17 @@
+
+<table class="table ">
+  <thead>
+    <tr>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let producto of productos">
+    <tr *ngFor="let productoss of producto">
+      <td> {{productoss.Nombre}} </td>
+      <td> {{productoss.Descripcion}} </td>
+      <td> {{productoss.Fechadeexpiracion}} </td>
+    </tr>
+  </tbody>
+</table>
