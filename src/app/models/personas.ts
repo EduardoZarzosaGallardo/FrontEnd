@@ -1,4 +1,5 @@
 export interface PersonasI {
+    id?:number;
     Foto: string;
     Nombre: String;
     ApellidoPaterno: string;

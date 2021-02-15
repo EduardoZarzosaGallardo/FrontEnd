@@ -1,6 +1,4 @@
 export interface JwtResponseI {
-    //dataUser:{
-        token: string;
-        //expiresIn: string;
-    //}
+    user_id:number;
+    token: string;
 }

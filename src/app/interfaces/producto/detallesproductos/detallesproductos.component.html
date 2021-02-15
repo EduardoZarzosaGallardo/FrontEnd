@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3> Productos</h3>
+        </div>
+       
+        <div class="card-body">
+            <table class="table" style="text-align:center">
+            <thead class="thead-dark">
+                <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Fecha de caducidad</th>
+                <th scope="col">Cantidad en existencia</th>
+                <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let producto of productos">
+                <tr *ngFor="let productoss of producto">
+                <td>{{productoss.Nombre}}</td>
+                <td>{{productoss.Descripcion}}</td>
+                <td>{{productoss.Fechadeexpiracion}}</td>
+                <td>{{productoss.Existenciadecantidad}}</td>
+                <td>
+                <button (click)="actualizarproducto()" class="btn btn-warning">Update</button>
+                <button (click)="deletproducto()" class="btn btn-danger">Delete</button>
+                <button (click)="deletproducto()" class="btn btn-info">Comentarios</button>
+                </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!--
+    
+-->

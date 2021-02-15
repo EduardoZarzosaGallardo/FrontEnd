@@ -1,8 +1,9 @@
 export interface ProductosI {
-    Foto:string;
+    //Foto:File;
+    id?:number;
     Nombre:string;
     Descripcion:string;
     Fechadeexpiracion:string;
     Existenciadecantidad:number;
-    Persona:number;
+    Persona?:number;
 }

@@ -14,11 +14,14 @@ export class LoginComponent implements OnInit {
   constructor(private authService:AuthService, private router: Router) { }
 
   ngOnInit(): void {
+    this.authService.checktoken()
   }
 
+ 
+  
   onLogin(form): void {
     this.authService.login(form.value).subscribe(res => {
-      this.router.navigateByUrl('/auth');
+      this.router.navigateByUrl('/detallesproducto');
     });
   }
 
